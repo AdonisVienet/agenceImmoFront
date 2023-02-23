@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Route, RouterModule, Routes } from '@angular/router';
 
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,6 +17,8 @@ import { TerrainComponent } from './terrain/terrain.component';
 import { VisiteComponent } from './visite/visite.component';
 import { LoginComponent } from 'app/components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { RegistrationComponent } from 'app/registration/registration.component';
+
 
 @NgModule({
   imports: [
@@ -39,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     TerrainComponent,
     VisiteComponent,
     LoginComponent,
+    RegistrationComponent
   ],
   exports: [
     FooterComponent,

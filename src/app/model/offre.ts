@@ -1,7 +1,7 @@
 import { Avis } from "./avis";
 import { Visite } from "./visite";
 
-export enum enumEtatOffre {
+export enum EtatOffre {
     RENOVE = "RENOVE",
     NEUF = "NEUF",
     BON_ETAT = "BON_ETAT",
@@ -19,7 +19,7 @@ export class Offre {
     imageOffre!: File;
     disponibiliteOffre!: boolean;
     orientationOffre!: string;
-    etatOffre!: enumEtatOffre;
+    etatOffre!: EtatOffre;
     typeOffre!: string;
     visite!: Visite[];
     avis!: Avis[];

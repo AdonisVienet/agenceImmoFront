@@ -2,7 +2,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { Route, RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,9 @@ import { GarageService } from './services/garage.service';
 import { TerrainService } from './services/terrain.service';
 import { VisiteService } from './services/visite.service';
 import { AppService } from './app.service';
+import { RegistrationComponent } from './registration/registration.component';
+
+
 
 @NgModule({
   imports: [

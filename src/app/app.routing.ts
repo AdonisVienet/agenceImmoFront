@@ -16,11 +16,12 @@ import { UtilisateurComponent } from './components/utilisateur/utilisateur.compo
 import { VisiteComponent } from './components/visite/visite.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'login',
+    component : LoginComponent,
     pathMatch: 'full',
   }, {
     path: '',
@@ -59,7 +60,8 @@ const routes: Routes =[
   }, {
     path: 'visites',
     component: VisiteComponent
-  }
+   }
+
 ];
 
 @NgModule({

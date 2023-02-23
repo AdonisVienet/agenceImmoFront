@@ -17,17 +17,13 @@ export class RegistrationComponent implements OnInit {
   constructor(private utilisateurService:UtilisateurService, private router:Router){}
   
   ngOnInit(): void {
-    this.findAllUtilisateurs();
 
   }
-  findAllUtilisateurs(){
-    this.utilisateurService.findAll().subscribe(data => {this.users = data});
-  }
+
 
   saveUtilisateur(){
     this.utilisateurService.save(this.utilisateur).subscribe(
       () => {
-        this.findAllUtilisateurs();
         this.utilisateur = new Utilisateur();
       }
     )

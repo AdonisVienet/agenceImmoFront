@@ -5,6 +5,21 @@
 <div [hidden]="authorities()">
     <div class="container-fluid mt--7">
         <p>Les admins</p>
+        <p>Calculer la surface moyenne des offres disponible dans la capitale : </p>
+        <button (click)="surfaceMoyenneParis()">surface</button>
+        <br>
+        <p>Calculer le prix cumulé des offres dans la capitale : </p>
+        <button (click)="totalPrixOffreParis()">prix</button>
+        <br>
+        <p>Trouver le nombre d'utilisateurs : </p>
+        <button (click)="nombreUtilisateur()">utilisateurs</button>
+        <br>
+        <p>Trouver le nombre de clients : </p>
+        <button (click)="nombreClient()">clients</button>
+        <br>
+        <p>Trouver le nombre de gérants : </p>
+        <button (click)="nombreGerant()">gérants</button>
+        <br>
     </div>
 </div>
 <!--Les non admin-->

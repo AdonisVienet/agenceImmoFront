@@ -5,23 +5,29 @@
 <div [hidden]="authorities()">
     <div class="container-fluid mt--7">
         <p>Les admins</p>
-        <p>Calculer la surface moyenne des offres disponible dans la capitale : </p>
-        <button (click)="surfaceMoyenneParis()">surface</button>
+        <p>Calculer la surface moyenne des offres disponible dans la capitale :</p>
+        <button type="button" (click)="toggleInput()">Afficher/Masquer la surface</button>
         <br>
-        <p>Calculer le prix cumulé des offres dans la capitale : </p>
-        <button (click)="totalPrixOffreParis()">prix</button>
+        <input type="text" [(ngModel)]="resultatSurface" [hidden]="!showInput">
+        <p>Calculer le prix cumulé des offres dans la capitale :</p>
+        <button type="button" (click)="toggleInput()">Afficher/Masquer le prix</button>
         <br>
-        <p>Trouver le nombre d'utilisateurs : </p>
-        <button (click)="nombreUtilisateur()">utilisateurs</button>
+        <input type="text" [(ngModel)]="resultatPrix" [hidden]="!showInput">
+        <p>Trouver le nombre d'utilisateurs :</p>
+        <button type="button" (click)="toggleInput()">Afficher/Masquer le nombre d'utilisateurs</button>
         <br>
-        <p>Trouver le nombre de clients : </p>
-        <button (click)="nombreClient()">clients</button>
+        <input type="text" [(ngModel)]="resultatUtilisateur" [hidden]="!showInput">
+        <p>Trouver le nombre de clients :</p>
+        <button type="button" (click)="toggleInput()">Afficher/Masquer le nombre de clients</button>
         <br>
-        <p>Trouver le nombre de gérants : </p>
-        <button (click)="nombreGerant()">gérants</button>
+        <input type="text" [(ngModel)]="resultatClient" [hidden]="!showInput">
+        <p>Trouver le nombre de gérants :</p>
+        <button type="button" (click)="toggleInput()">Afficher/Masquer le nombre de gérants</button>
         <br>
+        <input type="text" [(ngModel)]="resultatGerant" [hidden]="!showInput">
     </div>
 </div>
+
 <!--Les non admin-->
 <div [hidden]="!authorities()">
     <div class="container-fluid mt--7" style="background-color: white;">

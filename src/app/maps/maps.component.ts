@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NumberValueAccessor } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from 'app/app.service';
 import { Utilisateur } from 'app/model/utilisateur';
@@ -10,6 +11,13 @@ import { UtilisateurService } from 'app/services/utilisateur.service';
     templateUrl: './maps.component.html'
 })
 export class MapsComponent implements OnInit {
+    resultatSurface!: number;
+    resultatPrix!: number;
+    resultatUtilisateur!: number;
+    resultatClient!: number;
+    resultatGerant!: number;
+    showInput = true;
+
 
     constructor(private appService: AppService, private statistiqueService: StatistiqueService, private router: Router) { }
 
@@ -19,40 +27,42 @@ export class MapsComponent implements OnInit {
         this.nombreUtilisateur();
         this.nombreGerant();
         this.nombreClient();
+        this.toggleInput();
     }
 
     surfaceMoyenneParis() {
         this.statistiqueService.surfaceMoyenneOffreParis().subscribe((resultatSurface) => {
-            console.log(resultatSurface);
+            this.resultatSurface = resultatSurface;
         });
     }
 
     totalPrixOffreParis() {
         this.statistiqueService.totalPrixOffreParis().subscribe((resultatPrix) => {
-            console.log(resultatPrix);
+            this.resultatPrix = resultatPrix;
         });
     }
 
     nombreUtilisateur() {
         this.statistiqueService.nombreUtilisateur().subscribe((resultatUtilisateur) => {
-            console.log(resultatUtilisateur);
+            this.resultatUtilisateur = resultatUtilisateur;
         });
     }
 
     nombreGerant() {
         this.statistiqueService.nombreGerant().subscribe((resultatGerant) => {
-            console.log(resultatGerant);
+            this.resultatGerant = resultatGerant;
         });
     }
 
     nombreClient() {
         this.statistiqueService.nombreClient().subscribe((resultatClient) => {
-            console.log(resultatClient);
+            this.resultatClient = resultatClient;
         });
     }
 
-
-
+    toggleInput() {
+        this.showInput = !this.showInput;
+    }
 
 
 

@@ -11,9 +11,9 @@ export const ROUTES: RouteInfo[] = [
   { path: '/home', title: 'Accueil', icon: 'home', class: '' },
   { path: '/user-profile', title: 'Compte personnel', icon: 'person', class: '' },
   { path: '/table-list', title: 'Toutes nos offres', icon: 'local_offer', class: '' },
-  { path: '/typography', title: '(gérant) Ajouter une offre', icon: 'note_add', class: '' },
-  { path: '/icons', title: '(admin) gérer les utilisateurs', icon: 'settings_applications', class: '' },
-  { path: '/maps', title: '(admin) Statistiques', icon: 'create', class: '' },
+  { path: '/typography', title: 'Ajouter une offre', icon: 'note_add', class: '' },
+  { path: '/icons', title: 'Gérer les utilisateurs', icon: 'settings_applications', class: '' },
+  { path: '/maps', title: "Statistiques de l'application", icon: 'create', class: '' },
   // { path: '/notifications', title: 'Notifications', icon: 'notifications', class: '' },
   { path: '/upgrade', title: 'Contactez-nous !', icon: 'unarchive', class: 'active-pro' },
 ];

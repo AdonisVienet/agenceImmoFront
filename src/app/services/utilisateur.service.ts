@@ -59,4 +59,7 @@ export class UtilisateurService {
     return this.httpClient.put(this.BASE_URL + "/" + utilisateur.idUtilisateur, utilisateur);
   }
 
+  public nombreUtilisateur(): Observable<any[]> {
+    return this.httpClient.get<any[]>(this.BASE_URL);
+  }
 }

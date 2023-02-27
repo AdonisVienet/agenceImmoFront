@@ -49,4 +49,16 @@ export class TypographyComponent implements OnInit {
     localStorage.setItem("editOffreId", offre.idOffre.toString());
     this.router.navigate(['/editOffre', offre.idOffre]);
   }
+
+  authenticated() {
+    return this.appService.authenticated; //par défaut = false donc si connecté =true
+  }
+  //Gestion des profils : 
+  authorities() {
+    if (this.appService.isGerant == true) {
+      return false; //car on va utiliser la directive [hidden]=false si isAdmin = true
+    } else {
+      return true; // ici [hidden]=true si isAdmin=false
+    }
+  }
 }

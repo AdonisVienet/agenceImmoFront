@@ -45,13 +45,33 @@ export class IconsComponent {
     this.utilisateurService.delete(id).subscribe(() => { this.findAllUtilisateurs(); })
   }
 
-  editUtilisateur(utilisateur: Utilisateur) {
+  /*editUtilisateur(utilisateur: Utilisateur) {
     // localStorage : créer un attribut (name="editUserId") dans le navigateur et lui affecter une valeur (ediUserId= idUtilisateur)   
     // étape 1 : MAJ du composant   
     localStorage.removeItem("editUtilisateurId");
     // étape 2 : Séleectionner une ligne    
     localStorage.setItem("editUtilisateurId", utilisateur.idUtilisateur.toString());
     this.router.navigate(['/editUtilisateur', utilisateur.idUtilisateur]);
+  }*/
+
+  updateUtilisateur() {
+    console.log("update utilisateur", this.users);
+    this.utilisateurService.save(this.users).subscribe(
+      () => {
+        console.log("Update ok");
+      }
+    )
+  }
+  authenticated() {
+    return this.appService.authenticated; //par défaut = false donc si connecté =true
+  }
+  //Gestion des profils : 
+  authorities() {
+    if (this.appService.isAdmin == true) {
+      return false; //car on va utiliser la directive [hidden]=false si isAdmin = true
+    } else {
+      return true; // ici [hidden]=true si isAdmin=false
+    }
   }
 }
 

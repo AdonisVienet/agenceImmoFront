@@ -1,5 +1,33 @@
-<!--<div id="map"></div>-->
-<div>
-    <p>Bonjour à tous, ici c'est l'endroit des statistiques (seuls admin)
-    <p>
+<br>
+<br>
+<br>
+<!--Les admin-->
+<div [hidden]="authorities()">
+    <div class="container-fluid mt--7">
+        <p>Les admins</p>
+    </div>
+</div>
+<!--Les non admin-->
+<div [hidden]="!authorities()">
+    <div class="container-fluid mt--7" style="background-color: white;">
+        <h1> &nbsp;</h1>
+        <br>
+        <h1> &nbsp;</h1>
+        <br>
+        <h1> &nbsp;</h1>
+        <br>
+        <h1> &nbsp;</h1>
+        <br>
+        <h3>Seuls les <b>administrateurs de l'application </b> accéder à cet onglets. Merci de votre
+            <b>compréhension</b>.
+        </h3>
+        <h1> &nbsp;</h1>
+        <br>
+        <h1> &nbsp;</h1>
+        <br>
+        <h1> &nbsp;</h1>
+        <br>
+        <h1> &nbsp;</h1>
+        <br>
+    </div>
 </div>

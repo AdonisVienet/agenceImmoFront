@@ -14,48 +14,7 @@ import { MdpComponent } from 'app/mdp/mdp.component';
 import { AppartementComponent } from 'app/components/appartement/appartement.component';
 
 export const AdminLayoutRoutes: Routes = [
-    // {
-    //   path: '',
-    //   children: [ {
-    //     path: 'dashboard',
-    //     component: DashboardComponent
-    // }]}, {
-    // path: '',
-    // children: [ {
-    //   path: 'userprofile',
-    //   component: UserProfileComponent
-    // }]
-    // }, {
-    //   path: '',
-    //   children: [ {
-    //     path: 'icons',
-    //     component: IconsComponent
-    //     }]
-    // }, {
-    //     path: '',
-    //     children: [ {
-    //         path: 'notifications',
-    //         component: NotificationsComponent
-    //     }]
-    // }, {
-    //     path: '',
-    //     children: [ {
-    //         path: 'maps',
-    //         component: MapsComponent
-    //     }]
-    // }, {
-    //     path: '',
-    //     children: [ {
-    //         path: 'typography',
-    //         component: TypographyComponent
-    //     }]
-    // }, {
-    //     path: '',
-    //     children: [ {
-    //         path: 'upgrade',
-    //         component: UpgradeComponent
-    //     }]
-    // }
+
     { path: 'login', component: LoginComponent },
     { path: 'home', component: DashboardComponent }
     /*{ path: 'dashboard',           component: DashboardComponent }*/,
@@ -67,6 +26,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications', component: NotificationsComponent },
     { path: 'upgrade', component: UpgradeComponent },
     { path: 'registration', component: RegistrationComponent },
-    { path: 'mdp', component: MdpComponent},
-    { path : 'appartements', component: AppartementComponent}
+    { path: 'mdp', component: MdpComponent },
+    { path: 'appartements', component: AppartementComponent }
 ];

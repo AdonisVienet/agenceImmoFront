@@ -36,8 +36,6 @@ export class UserProfileComponent implements OnInit {
     this.idUser = this.appService.idUser;
     console.log("user profile " + this.idUser);
     this.findOne(this.idUser);
-    // this.findAllUtilisateurs();
-    //this.updateUtilisateur();
   }
 
   findAllUtilisateurs() {
@@ -52,11 +50,5 @@ export class UserProfileComponent implements OnInit {
       }
     )
   }
-  //   this.utilisateurService.update(this.utilisateur).subscribe(
-  //     () => {
-  //       this.findAllUtilisateurs(); // MAJ la lise des utilisateurs
-  //       this.utilisateur = new Utilisateur(); // Vider le formulaire
-  //     }
-  //   )
-  // }
+
 }

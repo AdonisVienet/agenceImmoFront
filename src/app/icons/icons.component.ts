@@ -45,14 +45,7 @@ export class IconsComponent {
     this.utilisateurService.delete(id).subscribe(() => { this.findAllUtilisateurs(); })
   }
 
-  /*editUtilisateur(utilisateur: Utilisateur) {
-    // localStorage : créer un attribut (name="editUserId") dans le navigateur et lui affecter une valeur (ediUserId= idUtilisateur)   
-    // étape 1 : MAJ du composant   
-    localStorage.removeItem("editUtilisateurId");
-    // étape 2 : Séleectionner une ligne    
-    localStorage.setItem("editUtilisateurId", utilisateur.idUtilisateur.toString());
-    this.router.navigate(['/editUtilisateur', utilisateur.idUtilisateur]);
-  }*/
+
 
   updateUtilisateur() {
     console.log("update utilisateur", this.users);

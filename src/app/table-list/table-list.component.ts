@@ -14,7 +14,7 @@ export class TableListComponent implements OnInit {
 
   offres: any[];
   offreRecherche: any;
-  bien : any;
+  bien: any;
   ville: string;
   typeOffre: string;
   prix: number;
@@ -25,41 +25,36 @@ export class TableListComponent implements OnInit {
 
   offre: Offre = new Offre();
 
-  constructor(private httpClient:HttpClient, private offreService: OffreService, private appService: AppService, private router: Router) { }
+  constructor(private httpClient: HttpClient, private offreService: OffreService, private appService: AppService, private router: Router) { }
 
   ngOnInit() {
     this.findAllOffre();
-    this.ville ='';
-    // this.typeOffre = '';
-    // this.prix = 0;
-    // this.surface = 0;
-    // this.orientation = '';
-    // this.bien = '';
+    this.ville = '';
     this.rechercher();
 
 
 
-    $(document).ready(function(){
-      $("#rechercheavancee").hide(); 
-    $("#boutonrecherche").click(function(){
-      $("#rechercheavancee").toggle(2500); 
-  });
-});
-}
+    $(document).ready(function () {
+      $("#rechercheavancee").hide();
+      $("#boutonrecherche").click(function () {
+        $("#rechercheavancee").toggle(2500);
+      });
+    });
+  }
 
-onSubmit(){
-  this.rechercher();
-}
+  onSubmit() {
+    this.rechercher();
+  }
 
 
   findAllOffre() {
     this.offreService.findAll().subscribe(data => { this.offres = data; });
   }
 
-  rechercher(){
+  rechercher() {
     this.offreService.rechercher(this.ville).subscribe(
-        data => {this.offreRecherche=data;}); 
-      
+      data => { this.offreRecherche = data; });
+
   }
 
 

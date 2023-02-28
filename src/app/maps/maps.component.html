@@ -1,30 +1,58 @@
-<br>
-<br>
-<br>
 <!--Les admin-->
 <div [hidden]="authorities()">
-    <div class="container-fluid mt--7">
-        <p>Les admins</p>
-        <p>Calculer la surface moyenne des offres disponible dans la capitale :</p>
-        <button type="button" (click)="toggleInput()">Afficher/Masquer la surface</button>
+    <div class="container-fluid mt--7" style="background-color: white;">
         <br>
-        <input type="text" [(ngModel)]="resultatSurface" [hidden]="!showInput">
-        <p>Calculer le prix cumulé des offres dans la capitale :</p>
-        <button type="button" (click)="toggleInput()">Afficher/Masquer le prix</button>
         <br>
-        <input type="text" [(ngModel)]="resultatPrix" [hidden]="!showInput">
-        <p>Trouver le nombre d'utilisateurs :</p>
-        <button type="button" (click)="toggleInput()">Afficher/Masquer le nombre d'utilisateurs</button>
         <br>
-        <input type="text" [(ngModel)]="resultatUtilisateur" [hidden]="!showInput">
-        <p>Trouver le nombre de clients :</p>
-        <button type="button" (click)="toggleInput()">Afficher/Masquer le nombre de clients</button>
+        <h3 style="color: chocolate;"><b>Les statistiques suivantes sont des statistiques dynamiques.</b></h3>
         <br>
-        <input type="text" [(ngModel)]="resultatClient" [hidden]="!showInput">
-        <p>Trouver le nombre de gérants :</p>
-        <button type="button" (click)="toggleInput()">Afficher/Masquer le nombre de gérants</button>
+        <h4>Elles permettent d'obtenir des données sur <b>l'utilisation de l'application et sur les offres
+                disponibles.</b>
+        </h4>
         <br>
-        <input type="text" [(ngModel)]="resultatGerant" [hidden]="!showInput">
+        <br>
+        <br>
+        <div class="row">
+            <h4><b>Surface moyenne </b> des offres dans la capitale :</h4>
+            <input style="border-color: chocolate;" type="text" [(ngModel)]="resultatSurface" [hidden]="!showInput">
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <h4><b>Prix cumulé</b> de toutes les offres dans la capitale :</h4>
+            <input style="border-color: chocolate;" type="text" [(ngModel)]="resultatPrix" [hidden]="!showInput">
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <h4>Le nombre d'<b>utilisateurs </b>:</h4>
+            <input style="border-color: chocolate;" type="text" [(ngModel)]="resultatUtilisateur" [hidden]="!showInput">
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <h4>Le nombre de <b> clients </b>:</h4>
+            <input style="border-color: chocolate;" type="text" [(ngModel)]="resultatClient" [hidden]="!showInput">
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <h4>Le nombre de <b>gérants </b>:</h4>
+            <input style="border-color: chocolate;" type="text" [(ngModel)]="resultatGerant" [hidden]="!showInput">
+        </div>
+        <br>
+        <br>
+        <br>
+        <button style="color: white; background-color: chocolate;" type="button"
+            (click)="toggleInput()">Afficher/Masquer toutes les statistiques</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 </div>
 
